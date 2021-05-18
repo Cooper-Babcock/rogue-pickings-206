@@ -1,3 +1,4 @@
+
 html {
     font-size:16px;
 }
@@ -30,6 +31,8 @@ h3 {
 h1 {
 	font-size: 1.875em;
   width: 100%;
+  border-bottom: solid;
+  border-color: #77a466;
 }
 h2 {
 	font-size: 1.125em;
@@ -50,9 +53,9 @@ header {
 	margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   width: 100%;
+  text-align: center;
 }
 
 header h1 {
@@ -76,7 +79,7 @@ header nav ul li {
 	font-weight: 700;
 	font-size: .875em;
 	padding: 0 10px;
-	display: inline;
+  line-height: 50px;
 }
 header nav ul li a{
 	text-decoration: none;
@@ -119,17 +122,13 @@ header nav ul li a{
 .section-two,
 .section-three {
 	width: 100%;
-
-	border-top: 1px solid #eee;
+border-bottom: 1px solid #eee;
+margin-left: 0 auto;
 }
 
 .section-one h3 {
 	padding: 10px 0;
-}
-
-.section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
+  border-top: 1px solid #eee;
 }
 
 .section-two h3,
@@ -149,12 +148,12 @@ header nav ul li a{
 .reviews {
 	color: #333;
 	font-size: 1em;
-	line-height: 21px;
+	line-height: 1.3125;
 }
 
 .address {
-	font-size: 16px;
-	line-height: 24px;
+	font-size: 1em;
+	line-height: 1.5;
 }
 
 /*The widths are in a percentage!*/
@@ -174,4 +173,46 @@ footer span {
 	color: #77a466;
 	font-size: .875em;
 }
+}
+
+@media only screen and (min-width: 768px) {
+    .bottom-section{
+        justify-content: space-between;
+        align-items: flex-start;
+        border-top: 1px solid #eee;
+    }
+
+    .section-one,
+    .section-two,
+    .section-three {
+        border-top: none;
+        flex-basis: 30%;
+    }
+
+    .section-two {
+        border-left: 1px solid #eee;
+        border-right: 1px solid #eee;
+        padding: 0 20px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    header {
+        justify-content: space-between;
+    }
+
+    header h1 {
+        width: 30%;
+        padding: 50px;
+        border-bottom: none;
+        text-align: left;
+    }
+
+    header nav {
+        width: 40%;
+    }
+
+    header nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
 }
